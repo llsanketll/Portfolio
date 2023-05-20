@@ -3,11 +3,12 @@ import Image from "next/image";
 import { BsInstagram } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
 import { SiUpwork } from "react-icons/si";
+import placeHolder from "@/public/placeholder.png";
 
 export default function Home() {
   return (
-    <main className="mt-16 flex">
-      <div className="flex h-[60vh] flex-col ">
+    <main className="mt-16 flex ">
+      <div className="flex h-[60vh] w-[50%] flex-col ">
         <h1 className="mb-5 text-5xl font-bold leading-10">
           Full Stack{" "}
           <span className="bg-gradient-to-r from-[#EB0776]  to-[#F04598] bg-clip-text  text-transparent">
@@ -34,14 +35,19 @@ export default function Home() {
           <a href="https://github.com/llsanketll" target="_blank">
             <BsGithub />
           </a>
-          <a href="https://www.upwork.com/freelancers/~018ea6a618289cc9d0" target="_blank">
+          <a
+            href="https://www.upwork.com/freelancers/~018ea6a618289cc9d0"
+            target="_blank">
             <SiUpwork />
           </a>
         </div>
       </div>
-      <div>
-        <Image src="/placeholder.png" width={1080} height={1080} alt="Image of rocket landing page" />
-      </div>
+      <Image
+        src={placeHolder}
+        width={400}
+        alt="Image of rocket landing page"
+        className="ml-auto"
+      />
     </main>
   );
 }

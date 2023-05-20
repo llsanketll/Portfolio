@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FaMoon } from "react-icons/fa";
+import logoImage from "@/public/logo.png";
 
 const navItems = [
   {
@@ -28,7 +29,7 @@ export default function Navbar() {
   return (
     <nav className="flex items-center">
       <Image
-        src="/logo.png"
+        src={logoImage}
         height={50}
         width={50}
         alt="Sanket Lamsal Logo"

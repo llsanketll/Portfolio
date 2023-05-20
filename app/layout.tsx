@@ -2,6 +2,8 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import Image from "next/image";
+import wireframeImage from "@/public/wireframe.png";
+import donutImage from "@/public/donut.png";
 
 const popins = Poppins({
   subsets: ["latin"],
@@ -29,8 +31,8 @@ export default function RootLayout({
           <Navbar />
           {children}
         </div>
-        <Image src="/wireframe.png" width={800} height={800} className="absolute bottom-[-10%] right-[-25%] z-[1] saturate-150" alt="Imag of a donut 3d" />
-        <Image src="/donut.png" width={480} height={270} className="rotate-[130deg] absolute bottom-[10%] left-[-10%] z-[1]" alt="Imag of a donut 3d" />
+        <Image src={wireframeImage} width={800} height={800} className="absolute bottom-[-10%] right-[-25%] z-[1] saturate-150" alt="Imag of a donut 3d" />
+        <Image src={donutImage} width={480} height={270} className="rotate-[130deg] absolute bottom-[10%] left-[-10%] z-[1]" alt="Imag of a donut 3d" />
         <div className="absolute left-[-15%] top-[-15%] z-0 h-[70vh] w-[70vh] rounded-full bg-gradient-to-r from-[#2d1717] to-[#560d41] blur-3xl"></div>
         <div className="absolute bottom-0 right-[-15%] z-0 h-[80vh] w-[80vh] rounded-full bg-gradient-to-l from-[#0f191e] to-[#0a1f3d] blur-3xl"></div>
       </body>
