@@ -8,6 +8,7 @@ import { FaMoon } from "react-icons/fa";
 const navItems = [
   {
     path: "/",
+    
     title: "Home",
   },
   {
