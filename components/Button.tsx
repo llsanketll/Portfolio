@@ -7,7 +7,7 @@ interface ButtonProps {
 }
 export default function Button({ variant, children , className}: ButtonProps) {
   return (
-    <button className={`${className} ${variant === "secondary" ? "bg-none border border-primary text-primary" : "bg-primary"} p-4 rounded-xl font-bold text-xl`}>
+    <button className={`${className} ${variant === "secondary" ? "bg-none border border-primary text-primary" : "bg-primary"} p-4 rounded-xl font-bold text-xl cursor-pointer`}>
       {children}
     </button>
   );

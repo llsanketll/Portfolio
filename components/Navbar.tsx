@@ -1,5 +1,6 @@
 "use client";
 import { navItem } from "@/util/types";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -8,7 +9,7 @@ import { FaMoon } from "react-icons/fa";
 const navItems = [
   {
     path: "/",
-    
+
     title: "Home",
   },
   {
@@ -26,13 +27,22 @@ export default function Navbar() {
   }, [pathName]);
   return (
     <nav className="flex items-center">
-      <img src="/logo.png" alt="Sanket Lamsal Logo" className="h-16 w-16" />
+      <Image
+        src="/logo.png"
+        height={50}
+        width={50}
+        alt="Sanket Lamsal Logo"
+      />
       <ul className="flex w-full items-center justify-center gap-10 text-xl">
         {navItems.map((item: navItem, index: number) => (
           <Link
             href={item.path}
             key={index}
-            className={item.path === currentRoute?.path ? "border-b-2" : "border-transparent border-b-2"}>
+            className={
+              item.path === currentRoute?.path
+                ? "border-b-2"
+                : "border-b-2 border-transparent"
+            }>
             {item.title}
           </Link>
         ))}

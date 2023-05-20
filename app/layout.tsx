@@ -24,12 +24,15 @@ export default function RootLayout({
         <title>Sanket Lamsal</title>
       </head>
       <body
-        className={`${popins.className} flex min-h-screen flex-col items-center justify-center bg-backgroundColor `}>
+        className={`${popins.className} flex min-h-screen flex-col items-center justify-center overflow-hidden bg-backgroundColor`}>
         <div className="relative z-10 h-[85vh] w-[80vw] rounded-3xl bg-glass px-20 pt-5 text-white backdrop-blur-lg">
           <Navbar />
           {children}
         </div>
-        <img src="/donut.png" className="absolute bottom-0 right-0 z-0" alt="Imag of a donut 3d"/>
+        <Image src="/wireframe.png" width={800} height={800} className="absolute bottom-[-10%] right-[-25%] z-[1] saturate-150" alt="Imag of a donut 3d" />
+        <Image src="/donut.png" width={480} height={270} className="rotate-[130deg] absolute bottom-[10%] left-[-10%] z-[1]" alt="Imag of a donut 3d" />
+        <div className="absolute left-[-15%] top-[-15%] z-0 h-[70vh] w-[70vh] rounded-full bg-gradient-to-r from-[#2d1717] to-[#560d41] blur-3xl"></div>
+        <div className="absolute bottom-0 right-[-15%] z-0 h-[80vh] w-[80vh] rounded-full bg-gradient-to-l from-[#0f191e] to-[#0a1f3d] blur-3xl"></div>
       </body>
     </html>
   );
